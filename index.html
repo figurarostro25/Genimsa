@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENIMSA - Mantenimiento y Motores Eléctricos</title>
+    <style>
+        /* Estilos Generales */
+        :root {
+            --primary-color: #0033a0; /* Azul industrial (Ajustar según logo) */
+            --secondary-color: #ffcc00; /* Amarillo/Naranja de advertencia o botones */
+            --text-color: #333;
+            --bg-light: #f4f7f6;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        a { text-decoration: none; }
+        
+        /* Encabezado y Navegación */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .logo { font-size: 1.8rem; font-weight: bold; color: var(--primary-color); }
+        .nav-links a {
+            color: var(--text-color);
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary-color); }
+
+        /* Sección Hero (Principal) */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 160, 0.7), rgba(0, 51, 160, 0.7)), url('URL_DE_TU_IMAGEN_DEFONDO.jpg') center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 { font-size: 2.5rem; max-width: 800px; margin: 0 auto 20px; }
+        .btn {
+            background-color: var(--secondary-color);
+            color: #111;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* Sección Servicios */
+        .services {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        .services h2 { font-size: 2rem; color: var(--primary-color); margin-bottom: 40px; }
+        .grid-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            text-align: left;
+        }
+        .service-card h3 { color: var(--primary-color); margin-bottom: 15px; }
+        .service-card ul { padding-left: 20px; color: #555; }
+        .service-card ul li { margin-bottom: 8px; }
+
+        /* Aliados Comerciales */
+        .partners {
+            background-color: var(--bg-light);
+            padding: 40px 5%;
+            text-align: center;
+        }
+        .partners-logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        /* Franja de Emergencia */
+        .emergency {
+            background-color: #d93025; /* Rojo de urgencia */
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .emergency h2 { margin: 0; font-size: 1.8rem; }
+        .emergency p { font-size: 1.5rem; font-weight: bold; margin-top: 10px; }
+
+        /* Pie de página (Footer) */
+        footer {
+            background-color: #1a1a1a;
+            color: #ddd;
+            padding: 50px 5% 20px;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+        }
+        .footer-container h4 { color: #fff; margin-bottom: 15px; }
+        .footer-container ul { list-style: none; padding: 0; }
+        .footer-container ul li { margin-bottom: 10px; }
+        .footer-container ul li a { color: #aaa; transition: color 0.3s; }
+        .footer-container ul li a:hover { color: #fff; }
+        .copyright { text-align: center; padding-top: 20px; font-size: 0.9rem; color: #777; }
+        
+        /* Responsivo básico para móviles */
+        @media (max-width: 768px) {
+            .nav-links { display: none; /* Aquí luego puedes agregar un menú hamburguesa */ }
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">GENIMSA</div>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#paneles">Paneles Solares</a>
+                <a href="#motores">Motores Eléctricos</a>
+                <a href="#plantas">Plantas Eléctricas</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Mantenimiento, embobinado y balanceo de todo tipo de Motores Eléctricos y de combustión</h1>
+        <a href="#servicios" class="btn">Conoce Nuestros Servicios</a>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="grid-services">
+            <div class="service-card" id="paneles">
+                <h3>Paneles Solares</h3>
+                <p>Ahorra en tu consumo, instalamos paneles solares de todo tipo.</p>
+                <ul>
+                    <li>Hogares y empresas</li>
+                    <li>Venta de Equipos</li>
+                    <li>Proyectos Eléctricos</li>
+                    <li>Estaciones de Carga</li>
+                    <li>Sistemas de Respaldo</li>
+                </ul>
+                <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Ver Más</a>
+            </div>
+
+            <div class="service-card" id="motores">
+                <h3>Motores Eléctricos</h3>
+                <p>Mantenimiento de motores y generadores, embobinados y reparaciones en sitio 24h.</p>
+                <ul>
+                    <li>Motores con alambre de cobre</li>
+                    <li>Bobinas preformadas</li>
+                    <li>Bombas Sumergibles</li>
+                    <li>Blowers y Generadores</li>
+                    <li>Frenos Magnéticos</li>
+                </ul>
+                <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Ver Más</a>
+            </div>
+
+            <div class="service-card" id="plantas">
+                <h3>Plantas Eléctricas</h3>
+                <p>Venta, mantenimiento y rebobinado en alta calidad con instalación completa.</p>
+                <ul>
+                    <li>Chapistería de Carcasa</li>
+                    <li>Instalación en Sitio</li>
+                    <li>Fabricación de Transfer</li>
+                    <li>Aislamiento Térmico</li>
+                </ul>
+                <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Ver Más</a>
+            </div>
+
+            <div class="service-card">
+                <h3>Taller Hidráulico</h3>
+                <p>Infraestructura para soporte y mantenimiento permanente las 24 horas.</p>
+                <ul>
+                    <li>Restauración Mecánica de Fluidos</li>
+                    <li>Montaje y Reparación de Circuitos</li>
+                    <li>Sistemas de Aire Comprimido</li>
+                    <li>Sistemas Neumáticos</li>
+                </ul>
+                <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Ver Más</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <h2>Empresas Aliadas</h2>
+        <div class="partners-logos">
+            <span>AGG</span> | 
+            <span>Perkins</span> | 
+            <span>Caterpillar</span> | 
+            <span>Electrisa</span> | 
+            <span>Solar LEMC</span>
+        </div>
+    </section>
+
+    <section class="emergency">
+        <h2>¿Atendemos emergencias 24 horas?</h2>
+        <p>Llámanos al: (+507) 6842-6429</p>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-container">
+            <div>
+                <h4 style="color: var(--secondary-color);">GENIMSA</h4>
+                <p>Ofrecemos una gama completa de servicios de alta calidad, respaldados por una empresa responsable que garantiza la excelencia en cada uno de nuestros proyectos.</p>
+            </div>
+            <div>
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Servicios 24 Horas</a></li>
+                    <li><a href="#">Galería y Productos</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Información de Contacto</h4>
+                <ul>
+                    <li>📍 Calle Principal Caimitillo, Plaza Molina, local 2, Panamá</li>
+                    <li>✉️ info@genimsa.com</li>
+                    <li>📞 (+507) 6842-6429</li>
+                    <li>🕒 Lun - Sab: 7:00 AM - 5:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 GENIMSA. Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
